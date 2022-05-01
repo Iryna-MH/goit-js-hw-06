@@ -9,7 +9,7 @@ const ingredients = [
 
 const refIngredients = document.querySelector('#ingredients');
 
-const array = ingredients.map((el, index, arr) => {
+const elements = ingredients.map((el, index, arr) => {
 
 const elemIngredients = document.createElement('li');
 elemIngredients.textContent = el;
@@ -18,8 +18,8 @@ return elemIngredients;
 
 })
 
-console.log(array);
+console.log(elements);
 
-refIngredients.append(...array); 
+refIngredients.append(...elements); 
 
 // map, append (не принимает массив, нужно просто расспылить как бы поэлементно ?), постaвить return
