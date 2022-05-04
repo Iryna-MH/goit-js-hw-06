@@ -16,10 +16,16 @@ const images = [
 
 const galleryRef = document.querySelector('.gallery');
 
-images.forEach(el => {
+const imagesMarkup = images.map( el => `<li><img src = "${el.url}" alt = "${el.alt}"></li>` );
 
-  galleryRef.insertAdjacentHTML('beforeend',`<li><img src = "${el.url}" alt = "${el.alt}"></li>`);
+galleryRef.insertAdjacentHTML('beforeend', imagesMarkup);
  
-})
+
+
+
+// const galleryRef = document.querySelector('.gallery');
+// images.forEach(el => {
+//   galleryRef.insertAdjacentHTML('beforeend',`<li><img src = "${el.url}" alt = "${el.alt}"></li>`);
+// })
 
 

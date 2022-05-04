@@ -1,11 +1,8 @@
 
-
 const loginFormRef = document.querySelector('.login-form');
-
 
 const manageLoginForm = (e) => {
 e.preventDefault();
-
 const {
     elements: { 
         email: {value: email},
@@ -19,13 +16,15 @@ if(email  === "" || password === "") {
 
 else {
     console.log({email, password});
-}
 
-e.currentTarget.reset();
+    e.currentTarget.reset();
+};
 
-}
+};
+
 
 loginFormRef.addEventListener('submit', manageLoginForm);
+
 
 // reset() method restores a form element's default values. 
 // This method does the same thing as clicking the form's reset button. 

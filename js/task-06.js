@@ -1,3 +1,4 @@
+
 const inputRef = document.querySelector('#validation-input');
 
 const onInputChange = () => {
@@ -14,4 +15,4 @@ else {
 }
 }
 
-inputRef.addEventListener('input', onInputChange);
+inputRef.addEventListener('change', onInputChange);
