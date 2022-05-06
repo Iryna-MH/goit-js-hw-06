@@ -13,17 +13,14 @@ const refs = {
 const defaultBox = 30;
 
 function createBoxes (amount) {
-  destroyBoxes();
+  // destroyBoxes();
   for( let i = 0; i < amount; i += 1 ) { 
    
     const boxMarkup  = document.createElement('div');
-    // console.log(boxMarkup);
     const size = defaultBox + i * 10;
     const color = getRandomHexColor();
     boxMarkup.style.cssText = `width: ${size}px; height: ${size}px; background-color: ${color}; margin: 5px;`;
     refs.boxesRef.appendChild(boxMarkup);
-   
-//     // refs.boxesRef.insertAdjacentHTML('beforeend', boxMarkup);
     
   }
   }
@@ -31,6 +28,7 @@ function createBoxes (amount) {
 function destroyBoxes() {
 
   refs.boxesRef.innerHTML = '';
+  refs.inputRef.value = 0;
 
 };
 
